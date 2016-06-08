@@ -15,7 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SelectOption"></activity>
+        <activity android:name=".SelectOption" />
+        <activity android:name=".Pacient.PacienteActivity" />
+        <activity android:name=".NewHistoryActivity"></activity>
     </application>
 
 </manifest>

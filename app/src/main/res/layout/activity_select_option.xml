@@ -27,13 +27,6 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Buscar Paciente"
-            android:id="@+id/button2"
-            android:layout_gravity="center_horizontal" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:text="Buscar Historia"
             android:id="@+id/button4" />
 
@@ -41,7 +34,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Ingresar Nueva Historia"
-            android:id="@+id/button3" />
+            android:id="@+id/button3"
+            android:onClick="lanzaCrearNuevaHistoria" />
 
         <Button
             android:layout_width="match_parent"
