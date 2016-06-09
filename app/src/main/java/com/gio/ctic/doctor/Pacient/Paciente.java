@@ -11,27 +11,35 @@ public class Paciente implements Parcelable {
     private String nombre;
     private String dni;
     private String id;
+    private String idDoc;
 
-    public Paciente(String nombre, String dni, String id) {
+    public Paciente(String nombre, String dni, String id,String idDoc) {
 
         this.nombre = nombre;
         this.dni = dni;
         this.id = id;
+        this.idDoc = idDoc;
     }
 
     protected Paciente(Parcel in) {
         nombre = in.readString();
         dni = in.readString();
         id = in.readString();
+        idDoc = in.readString();
     }
-    @Override
-    public String toString() {
-        return "Paciente{" +
-                "nombre='" + nombre + '\'' +
-                ", dni='" + dni + '\'' +
-                ", id='" + id + '\'' +
-                '}';
-    }
+
+
+    public static final Creator<Paciente> CREATOR = new Creator<Paciente>() {
+        @Override
+        public Paciente createFromParcel(Parcel in) {
+            return new Paciente(in);
+        }
+
+        @Override
+        public Paciente[] newArray(int size) {
+            return new Paciente[size];
+        }
+    };
 
     public String getId() {
         return id;
@@ -45,17 +53,10 @@ public class Paciente implements Parcelable {
         return nombre;
     }
 
-    public static final Creator<Paciente> CREATOR = new Creator<Paciente>() {
-        @Override
-        public Paciente createFromParcel(Parcel in) {
-            return new Paciente(in);
-        }
+    public String getIdDoc() {
+        return idDoc;
+    }
 
-        @Override
-        public Paciente[] newArray(int size) {
-            return new Paciente[size];
-        }
-    };
     @Override
     public int describeContents() {
         return 0;
@@ -66,5 +67,6 @@ public class Paciente implements Parcelable {
         dest.writeString(nombre);
         dest.writeString(dni);
         dest.writeString(id);
+        dest.writeString(idDoc);
     }
 }

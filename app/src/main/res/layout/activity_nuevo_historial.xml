@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Fecha de Hoy"
+        android:text="08/06/16"
         android:id="@+id/tfecha"
         android:paddingBottom="1dp"
         android:layout_weight="1" />
