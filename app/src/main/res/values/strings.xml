@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Doctor</string>
     <string name="user">User:</string>
+    <string name="pass">Password:</string>
 </resources>

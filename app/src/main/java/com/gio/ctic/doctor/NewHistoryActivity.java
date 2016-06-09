@@ -60,7 +60,7 @@ public class NewHistoryActivity extends AppCompatActivity {
         historial.setId_pac(id.getText().toString());
         historial.setIddoctor( idDoc);
 
-        new SJServer("http://52.40.252.10:8081/saveHistory/",historial).execute();
+        new SJServer("saveHistory/",historial).execute();
 
     }
 
